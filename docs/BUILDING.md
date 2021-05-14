@@ -48,6 +48,13 @@ sudo apt-get install git gcc g++ python pkg-config libssl-dev libdbus-1-dev \
      python3-pip unzip libgirepository1.0-dev libcairo2-dev
 ```
 
+On RPM based Linux distributions, such as Fedora, the dependencies can be
+satisfied with the following:
+
+```
+sudo dnf install git gcc g++ python pkg-config openssl-devel dbus-devel avahi-devel ninja-build python3-devel python3-pip python3-virtualenv unzip cairo-devel
+```
+
 #### How to install prerequisites on macOS
 
 On macOS, first install Xcode from the Mac App Store. The remaining dependencies
