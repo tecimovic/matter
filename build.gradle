@@ -1,0 +1,20 @@
+plugins {
+  id 'eclipse'
+}
+
+def m_buildhost = tasks.register('m_buildhost', {
+  description 'Build for Host platform'
+  group 'Matter'
+  doLast {
+    exec {
+      workingDir '.'
+      commandLine 'ninja', '-C', 'out/host'
+    }
+  }
+})
+
+eclipse {
+  autoBuildTasks m_buildhost
+}
+
+defaultTasks 'm_buildhost'
